@@ -7,7 +7,7 @@
 <script>
   export default {
     props:{
-      addTodo:Function
+      // addTodo:Function
     },
     data(){
       return {
@@ -29,7 +29,9 @@
           complete: false
         }
 //        添加到todos数组里  
-        this.addTodo(todo)
+        // this.addTodo(todo)
+        // 自定义事件的触发调用
+        this.$emit('todoAdd',todo)
 //        清除输入数据   这里的inputTodo是data里面的数据
         this.inputTodo = '';
       }

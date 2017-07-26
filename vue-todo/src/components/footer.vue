@@ -15,7 +15,7 @@
     props:{
       todos:Array,
       removeCompleted:Function,
-      selectAll:Function
+      // selectAll:Function
     },
     computed:{
       completeLen () {
@@ -41,7 +41,9 @@
         },
         set(val){// 当用户通过操作的方式改变了勾选状态
           // 更新todos
-          this.selectAll(val)
+          // this.selectAll(val)
+          this.$emit('selectAll',val)
+
         }
       }
 
